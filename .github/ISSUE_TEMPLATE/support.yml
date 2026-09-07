@@ -1,0 +1,54 @@
+name: Support request
+description: Ask for help with FileTandem without sharing sensitive data.
+title: "[Support] "
+labels:
+  - support
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contacting FileTandem Support. This issue will be public. Never attach private files or include passwords, pairing codes, full device serial numbers, or other sensitive information.
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - macOS app
+        - Android companion
+        - Both
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: FileTandem version
+      placeholder: "1.0 (1)"
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating-system version
+      placeholder: "macOS 15.6 or Android 16"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the result and what you expected. Redact sensitive information.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Connect …
+        2. Open …
+        3. Choose …
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Non-sensitive diagnostics
+      description: Include the connection type and device model if useful, but omit serial numbers and pairing details.

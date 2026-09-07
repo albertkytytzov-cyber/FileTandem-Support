@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="FileTandem setup, troubleshooting, and support">
+  <title>Support · FileTandem</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="FileTandem home">
+      <span class="brand-mark" aria-hidden="true">⇄</span>
+      <span>FileTandem</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="privacy.html">Privacy</a>
+      <a aria-current="page" href="support.html">Support</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero compact">
+      <p class="eyebrow">Help when you need it</p>
+      <h1>FileTandem Support</h1>
+      <p class="lede">Setup instructions and practical fixes for transferring files between Mac and Android.</p>
+      <div class="actions">
+        <a class="button primary" href="https://github.com/albertkytytzov-cyber/FileTandem-Support/issues/new/choose">Open a support request</a>
+        <a class="button" href="https://github.com/albertkytytzov-cyber/FileTandem-Support/issues">Known issues</a>
+      </div>
+      <p class="notice">GitHub issues are public. Never include private files, passwords, pairing codes, device serial numbers, or other sensitive information.</p>
+    </section>
+
+    <article class="policy-card">
+      <h2>Connect an Android device by USB</h2>
+      <ol>
+        <li>Use a USB cable that supports data and unlock the Android device.</li>
+        <li>For ADB, enable Developer options and USB debugging, then approve the Mac on the phone.</li>
+        <li>For MTP, choose File transfer in the Android USB notification when available.</li>
+        <li>Launch FileTandem and select the device in the sidebar.</li>
+      </ol>
+
+      <h2>Copy files</h2>
+      <p>Select files or folders in either panel. Use the center controls to copy them to Android or to Mac. Progress and cancellation controls appear in the transfer queue.</p>
+
+      <h2>If the device is not detected</h2>
+      <ul>
+        <li>Reconnect the cable and try another USB data cable or USB port.</li>
+        <li>Keep the Android device unlocked and select File transfer mode.</li>
+        <li>Revoke USB debugging authorizations on Android, reconnect, and approve the Mac again.</li>
+        <li>Close other Android transfer or ADB tools that may already control the device.</li>
+        <li>In FileTandem settings, reduce simultaneous transfers to 1 for an unstable cable or device.</li>
+      </ul>
+
+      <h2>Wireless ADB</h2>
+      <p>Keep both devices on the same trusted local network. In Android Developer options, open Wireless debugging, choose pairing by code, and enter the displayed address and code in FileTandem. Wireless ADB is optional.</p>
+
+      <h2>Android companion</h2>
+      <p>When FileTandem Companion is available, choose folders with Android’s system picker, pair only with a Mac you recognize, and use the app’s Revoke control when access is no longer needed.</p>
+
+      <h2>Compatibility</h2>
+      <p>The Mac app requires macOS 15.4 or later. ADB and MTP behavior can vary by Android version, manufacturer, cable, and USB mode.</p>
+    </article>
+
+    <section class="policy-card" lang="ru">
+      <h2>Поддержка на русском</h2>
+      <p>Подключите разблокированный Android качественным USB-кабелем. Для ADB включите «Для разработчиков» и «Отладка по USB», затем подтвердите доверие к Mac. Для MTP выберите режим «Передача файлов». Если устройство не видно, смените кабель или порт, повторно подтвердите отладку и закройте другие программы ADB.</p>
+      <p><a href="https://github.com/albertkytytzov-cyber/FileTandem-Support/issues/new/choose">Создать обращение</a>. Не добавляйте в публичное обращение пароли, коды подключения, серийные номера и личные файлы.</p>
+    </section>
+  </main>
+
+  <footer>© 2026 FileTandem contributors · <a href="privacy.html">Privacy Policy</a></footer>
+</body>
+</html>

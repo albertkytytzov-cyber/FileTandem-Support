@@ -30,7 +30,7 @@
 
     <article class="policy-card">
       <h2>Scope</h2>
-      <p>This policy covers the FileTandem app for macOS and the optional FileTandem Companion for Android. Features described for the Android companion apply only when that app is made available.</p>
+      <p>This policy covers FileTandem for macOS and the future optional FileTandem Companion for Android. No Android companion is required for the macOS app. The companion is currently unpublished, is not bundled with the Mac app, and is not involved in its App Store review; Android-specific statements below apply only when that separate app is made available.</p>
 
       <h2>Data collection and sharing</h2>
       <p>FileTandem does not collect, sell, or share personal data with the developer or third parties. It contains no advertising, analytics, tracking, or telemetry SDKs. The developer cannot see the files, filenames, device identifiers, pairing information, or transfer activity processed by the apps.</p>
@@ -45,7 +45,7 @@
       <p>The Android companion uses Android’s system folder picker (Storage Access Framework). It can access only folder trees explicitly granted by the user. Grants, paired-device identity, and preferences are stored locally and can be revoked in the app or Android system settings. The app does not request broad “all files” access.</p>
 
       <h2>Local-network transfers and security</h2>
-      <p>Wireless features communicate directly between the paired Mac and Android device on the local network. FileTandem does not route transfers through a developer-operated relay or cloud service. Pairing credentials and trusted peer information are stored locally. Users should pair only on a network they trust and revoke devices they no longer use.</p>
+      <p>The macOS app’s optional wireless connection uses Android’s standard Wireless debugging/ADB feature and communicates on the local network. FileTandem does not route that connection through a developer-operated relay or cloud service. The future companion protocol must preserve the same local-only property before release; it is not implemented in the current engineering build.</p>
 
       <h2>Third-party storage providers</h2>
       <p>If a user selects a folder exposed by a third-party Android document provider, that provider may separately synchronize the selected content according to its own privacy policy. FileTandem does not control that provider or send content to it independently.</p>
@@ -65,7 +65,7 @@
 
     <section class="policy-card" lang="ru">
       <h2>Кратко на русском</h2>
-      <p>FileTandem не собирает и не передаёт разработчику персональные данные, файлы, имена файлов, сведения об устройствах или историю передач. Работа выполняется локально между устройствами пользователя. Доступ к папкам выдаётся самим пользователем и может быть отозван. Для вопросов используйте <a href="https://github.com/albertkytytzov-cyber/FileTandem-Support/issues/new/choose">страницу поддержки</a> и не публикуйте в обращении конфиденциальные данные.</p>
+      <p>FileTandem не собирает и не передаёт разработчику персональные данные, файлы, имена файлов, сведения об устройствах или историю передач. Для Mac-приложения Android-компаньон не требуется; необязательное беспроводное подключение использует стандартную функцию Android «Беспроводная отладка»/ADB. Отдельный Google Play-компаньон не опубликован и не участвует в проверке Apple. Работа выполняется локально между устройствами пользователя. Доступ к папкам выдаётся самим пользователем и может быть отозван. Для вопросов используйте <a href="https://github.com/albertkytytzov-cyber/FileTandem-Support/issues/new/choose">страницу поддержки</a> и не публикуйте в обращении конфиденциальные данные.</p>
     </section>
   </main>
 

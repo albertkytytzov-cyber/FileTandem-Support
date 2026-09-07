@@ -1,7 +1,9 @@
 :root {
   color-scheme: light dark;
-  --accent: #30b668;
-  --accent-strong: #138349;
+  --accent: #2ba45e;
+  --accent-strong: #086b38;
+  --button-start: #075a30;
+  --button-end: #0c743d;
   --ink: #17211c;
   --muted: #5d6962;
   --surface: rgba(255, 255, 255, 0.82);
@@ -73,7 +75,7 @@ h1 { margin: 0.18em 0; max-width: 900px; font-size: clamp(3rem, 8vw, 6.4rem); li
 
 .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 .button { display: inline-block; padding: 12px 18px; border: 1px solid var(--line); border-radius: 999px; color: var(--ink); background: var(--surface); font-weight: 700; text-decoration: none; }
-.button.primary { color: white; border-color: transparent; background: linear-gradient(135deg, var(--accent-strong), var(--accent)); }
+.button.primary { color: white; border-color: transparent; background: linear-gradient(135deg, var(--button-start), var(--button-end)); }
 
 .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; padding-bottom: 96px; }
 .feature-grid article, .policy-card { border: 1px solid var(--line); border-radius: 24px; background: var(--surface); box-shadow: 0 22px 60px rgba(34, 63, 46, 0.08); backdrop-filter: blur(18px); }
@@ -97,5 +99,15 @@ footer { width: min(1080px, calc(100% - 40px)); margin: 48px auto 0; padding: 32
 }
 
 @media (prefers-color-scheme: dark) {
-  :root { --ink: #edf7f0; --muted: #b4c4ba; --surface: rgba(23, 32, 27, 0.84); --line: rgba(224, 245, 231, 0.13); --page: #0e1511; }
+  :root {
+    --accent: #51d686;
+    --accent-strong: #78e7a4;
+    --button-start: #075a30;
+    --button-end: #0c743d;
+    --ink: #edf7f0;
+    --muted: #b4c4ba;
+    --surface: rgba(23, 32, 27, 0.84);
+    --line: rgba(224, 245, 231, 0.13);
+    --page: #0e1511;
+  }
 }

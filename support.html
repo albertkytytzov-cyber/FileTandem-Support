@@ -27,6 +27,7 @@
       <p class="lede">Setup instructions and practical fixes for transferring files between Mac and Android.</p>
       <div class="actions">
         <a class="button primary" href="https://github.com/albertkytytzov-cyber/FileTandem-Support/issues/new/choose">Open a support request</a>
+        <a class="button" href="mailto:albert.kytytzov@gmail.com">Email support</a>
         <a class="button" href="https://github.com/albertkytytzov-cyber/FileTandem-Support/issues">Known issues</a>
       </div>
       <p class="notice">GitHub issues are public. Never include private files, passwords, pairing codes, device serial numbers, or other sensitive information.</p>
@@ -42,7 +43,7 @@
       </ol>
 
       <h2>Copy files</h2>
-      <p>Select files or folders in either panel. Use the center controls to copy them to Android or to Mac. FileTandem reports completion or an error in the app.</p>
+      <p>Select files or folders and use the available center control. Browsing and copying from Android to Mac are available on supported connections. ADB upload to Android is enabled only when the device filesystem passes FileTandem’s atomic no-replace publication check; otherwise FileTandem refuses the unsafe upload. MTP does not provide that upload guarantee.</p>
 
       <h2>If the device is not detected</h2>
       <ul>
@@ -57,18 +58,38 @@
       <p>Keep both devices on the same trusted local network. This optional connection uses Android’s standard Wireless debugging/ADB feature: in Android Developer options, open Wireless debugging, choose pairing by code, and enter the displayed address and code in FileTandem.</p>
 
       <h2>Android companion</h2>
-      <p>No Android companion app is required for FileTandem on Mac. USB ADB/MTP and optional standard Android Wireless debugging/ADB work independently of it.</p>
-      <p>The separate FileTandem Companion for Google Play is unpublished and is not bundled with, required by, or involved in review of the Mac App Store app. Its current builds are for internal engineering tests only because Mac connectivity and file transfer are not implemented.</p>
+      <p>No Android companion app is required for FileTandem on Mac. USB ADB/MTP and optional standard Android Wireless debugging/ADB work independently of it. The separate FileTandem Companion requires Android 10 or later and offers a protected connection without enabling Developer options.</p>
+      <ol>
+        <li>Put Mac and Android on the same trusted private Wi-Fi or Ethernet network.</li>
+        <li>In Companion, choose the Android folders you want to share and turn on Ready for transfers. The visible Ready session lasts no more than 30 minutes.</li>
+        <li>Create a pairing code. In FileTandem on Mac, open Connect to Android, select FileTandem Companion, and enter the eight-digit code.</li>
+        <li>Compare and approve the Mac fingerprint on Android.</li>
+        <li>Browse or copy from Android to Mac. Companion 1.0 can also create folders and permanently delete selected entries. Before deletion, the Mac app warns that a selected folder and everything inside it will be deleted and that the action cannot be undone. Upload from Mac to Android and rename are not available through Companion 1.0.</li>
+        <li>Turn off Ready or revoke the Mac/folder when finished.</li>
+      </ol>
+
+      <h2>If Companion cannot connect</h2>
+      <ul>
+        <li>Confirm both devices are on the same private Wi-Fi/Ethernet network, not cellular data, a guest network, or a network with client isolation.</li>
+        <li>Allow notifications when Android asks; Ready mode uses a visible foreground notification.</li>
+        <li>Keep the pairing screen open, use the code within five minutes, and approve the matching fingerprint within the displayed timeout.</li>
+        <li>Turn Ready off and on, then create a new code. Never share a code or full fingerprint in a public support issue.</li>
+        <li>If a folder disappeared or became read-only, choose it again in Android’s system picker. A storage provider can revoke or change its own access.</li>
+      </ul>
 
       <h2>Compatibility</h2>
-      <p>The Mac app requires macOS 15.4 or later. ADB and MTP behavior can vary by Android version, manufacturer, cable, and USB mode.</p>
+      <p>The Mac app requires macOS 15.4 or later. FileTandem Companion requires Android 10/API 29 or later. ADB, MTP, local discovery, and storage-provider behavior can vary by Android version, manufacturer, filesystem, network, cable, and USB mode.</p>
+
+      <h2>Contact</h2>
+      <p>Email <a href="mailto:albert.kytytzov@gmail.com">albert.kytytzov@gmail.com</a> for a private support or privacy question. Public, non-sensitive bug reports can be filed through the GitHub support link above.</p>
     </article>
 
     <section class="policy-card" lang="ru">
       <h2>Поддержка на русском</h2>
       <p>Подключите разблокированный Android качественным USB-кабелем. Для ADB включите «Для разработчиков» и «Отладка по USB», затем подтвердите доверие к Mac. Для MTP выберите режим «Передача файлов». Если устройство не видно, смените кабель или порт, повторно подтвердите отладку и закройте другие программы ADB.</p>
-      <p>Для Mac-приложения Android-компаньон не требуется. Необязательное беспроводное подключение использует стандартную функцию Android «Беспроводная отладка»/ADB. Отдельный FileTandem Companion для Google Play пока не опубликован, не входит в Mac-приложение и не участвует в проверке Apple; его текущие сборки предназначены только для внутренних инженерных тестов.</p>
-      <p><a href="https://github.com/albertkytytzov-cyber/FileTandem-Support/issues/new/choose">Создать обращение</a>. Не добавляйте в публичное обращение пароли, коды подключения, серийные номера и личные файлы.</p>
+      <p>Для USB и стандартной функции Android «Беспроводная отладка»/ADB компаньон не требуется. Загрузка на Android через ADB доступна только на файловой системе с требуемой атомарной публикацией; на несовместимом устройстве FileTandem безопасно откажется от операции. Через MTP можно просматривать и копировать файлы с Android на Mac.</p>
+      <p>Для отдельного FileTandem Companion требуется Android 10 или новее. Выберите папки, включите «Готов к передаче», откройте «Подключить Android» в Mac-приложении, введите восьмизначный код и подтвердите совпадающий отпечаток Mac на Android. Companion 1.0 позволяет просматривать и загружать файлы с Android на Mac, создавать папки и безвозвратно удалять выбранные объекты. Перед удалением Mac-приложение предупреждает, что выбранная папка и всё её содержимое будут удалены и действие нельзя отменить. Загрузка с Mac на Android и переименование через компаньон недоступны. Оба устройства должны находиться в одной доверенной локальной сети.</p>
+      <p>Для конфиденциального вопроса напишите на <a href="mailto:albert.kytytzov@gmail.com">albert.kytytzov@gmail.com</a>. <a href="https://github.com/albertkytytzov-cyber/FileTandem-Support/issues/new/choose">Создать публичное обращение</a>. Не добавляйте в него пароли, коды подключения, серийные номера и личные файлы.</p>
     </section>
   </main>
 

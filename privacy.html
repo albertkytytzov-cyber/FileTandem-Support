@@ -25,7 +25,7 @@
       <p class="eyebrow">Privacy by design</p>
       <h1>Privacy Policy</h1>
       <p class="lede">FileTandem moves files directly between devices you control. There is no FileTandem account, advertising, analytics, tracking, telemetry, or developer-operated transfer server.</p>
-      <p class="meta">Effective September 8, 2026 · Developer: FileTandem / albertkytytzov-cyber</p>
+      <p class="meta">Effective September 9, 2026 · Developer: FileTandem / albertkytytzov-cyber</p>
     </section>
 
     <article class="policy-card">
@@ -33,13 +33,13 @@
       <p>This policy covers FileTandem for macOS and the optional, separately distributed FileTandem Companion for Android. No Android companion is required for the Mac app’s USB ADB, USB MTP, or standard Android Wireless debugging/ADB paths. Android-specific statements apply only when the separate companion is installed.</p>
 
       <h2>Data collection and sharing</h2>
-      <p>FileTandem does not collect, sell, or share personal data with the developer or third parties. It contains no advertising, analytics, tracking, or telemetry SDKs. The developer cannot see the files, filenames, device identifiers, pairing information, or transfer activity processed by the apps.</p>
+      <p>The FileTandem apps do not automatically collect, sell, or share personal data with the developer or third parties. They contain no advertising, analytics, tracking, or telemetry SDKs. The developer cannot see the files, filenames, device identifiers, pairing information, or transfer activity processed by the apps. If a user voluntarily emails support, the developer receives the sender address and message content solely to answer and follow up on that request.</p>
 
       <h2>Files and device metadata</h2>
       <p>The apps process filenames, folder names, sizes, timestamps, device information, and file contents only on the user’s devices to display folders, preview files, and perform operations the user requests. Files are sent only to the paired destination device or storage provider selected by the user. Companion 1.0 supports reading files from Android to Mac, creating folders, and permanently deleting selected entries. Deleting a selected folder also deletes everything inside it after an explicit irreversible-action confirmation. Companion does not accept Mac-to-Android upload or rename requests.</p>
 
       <h2>macOS access</h2>
-      <p>App Sandbox restricts the Mac app to Downloads, folders selected by the user, connected USB devices, the local network when the user enables a wireless feature, and app-managed storage. Finder integration uses Apple’s File Provider framework.</p>
+      <p>App Sandbox restricts the Mac app to Downloads, folders selected by the user, connected USB devices, the local network when the user enables a wireless feature, and app-managed storage. Finder integration uses Apple’s File Provider framework. To serve Finder requests without downloading the same item again, FileTandem may keep a private local cache containing full copies of files fetched through File Provider together with the remote device identifier, path, size, modification time, and fetch time. The cache has a default 10 GiB capacity and evicts its oldest entries when it exceeds that limit. macOS may also purge cache data, and removing the app removes its app-managed data. Cached content is not sent to the developer.</p>
 
       <h2>Android access</h2>
       <p>The Android companion requires Android 10 or later and uses Android’s system folder picker (Storage Access Framework). It can access only folder trees explicitly granted by the user. Grants, exact paired-Mac public-key pins, and preferences are stored locally and can be revoked in the app or Android system settings. Revoking a Mac closes active sessions. The app does not request broad “all files” access, and Android backup is disabled for its pairing and grant state.</p>
@@ -51,7 +51,7 @@
       <p>If a user selects a folder exposed by a third-party Android document provider, that provider may separately synchronize the selected content according to its own privacy policy. FileTandem does not control that provider or send content to it independently.</p>
 
       <h2>Retention and deletion</h2>
-      <p>FileTandem has no server-side account or personal-data record. Local preferences, cached previews, folder grants, and paired-device records remain on the device until the user revokes them, clears app data, or removes the app. Short-lived pairing codes are kept only in memory and expire. Files copied to a user-selected destination remain until the user deletes them. A confirmed Companion delete is permanent on Android; if a folder is selected, its contents are deleted recursively.</p>
+      <p>FileTandem has no server-side account or personal-data record. Local preferences, cached previews, File Provider cached file copies and their remote path metadata, folder grants, and paired-device records may remain locally until the relevant cache is purged, the user revokes or clears the corresponding app data, or the app is removed. Short-lived pairing codes are kept only in memory and expire. Files copied to a user-selected destination remain until the user deletes them. A confirmed Companion delete is permanent on Android; if a folder is selected, its contents are deleted recursively.</p>
 
       <h2>Children</h2>
       <p>FileTandem is a general-purpose utility and is not directed specifically to children. The developer does not knowingly collect personal data from children or any other users.</p>
@@ -60,12 +60,12 @@
       <p>If FileTandem’s data practices change, this policy and the relevant store disclosures will be updated before the changed version is released. The effective date at the top identifies the current version.</p>
 
       <h2>Contact</h2>
-      <p>For a private privacy or support question, email <a href="mailto:albert.kytytzov@gmail.com">albert.kytytzov@gmail.com</a>. You can also open a public request through <a href="https://github.com/albertkytytzov-cyber/FileTandem-Support/issues/new/choose">FileTandem Support on GitHub</a>. Do not include private files, device serial numbers, passwords, pairing codes, or other sensitive information in a public issue.</p>
+      <p>For a private privacy or support question, email <a href="mailto:albert.kytytzov@gmail.com">albert.kytytzov@gmail.com</a>. Support messages are retained only as long as reasonably needed to respond, follow up, and maintain necessary business records. Use the same address to request deletion, subject to legal retention requirements. You can also open a public request through <a href="https://github.com/albertkytytzov-cyber/FileTandem-Support/issues/new/choose">FileTandem Support on GitHub</a>. Do not include private files, device serial numbers, passwords, pairing codes, or other sensitive information in a public issue.</p>
     </article>
 
     <section class="policy-card" lang="ru">
       <h2>Кратко на русском</h2>
-      <p>FileTandem не собирает и не передаёт разработчику персональные данные, файлы, имена файлов, сведения об устройствах или историю операций. Для USB и стандартной функции Android «Беспроводная отладка»/ADB компаньон не требуется. Отдельный FileTandem Companion работает только в доверенной локальной сети, использует взаимно аутентифицированное шифрование и имеет доступ только к выбранным пользователем папкам. Companion 1.0 позволяет просматривать и загружать файлы с Android на Mac, создавать папки и безвозвратно удалять выбранные объекты после явного подтверждения; при удалении выбранной папки также удаляется всё её содержимое. Загрузка с Mac на Android и переименование недоступны. Доступ к папке или Mac можно отозвать. Для конфиденциального вопроса напишите на <a href="mailto:albert.kytytzov@gmail.com">albert.kytytzov@gmail.com</a>. Публичное обращение можно создать на <a href="https://github.com/albertkytytzov-cyber/FileTandem-Support/issues/new/choose">странице поддержки</a>; не публикуйте там конфиденциальные данные.</p>
+      <p>Приложения FileTandem автоматически не собирают и не передают разработчику персональные данные, файлы, имена файлов, сведения об устройствах или историю операций. Для работы Finder приложение может хранить в закрытом локальном кэше полные копии запрошенных файлов и связанные с ними путь и метаданные; размер кэша по умолчанию ограничен 10 ГиБ, старые записи удаляются при превышении лимита, а разработчику содержимое не отправляется. Для USB и стандартной функции Android «Беспроводная отладка»/ADB компаньон не требуется. Отдельный FileTandem Companion работает только в доверенной локальной сети, использует взаимно аутентифицированное шифрование и имеет доступ только к выбранным пользователем папкам. Companion 1.0 позволяет просматривать и загружать файлы с Android на Mac, создавать папки и безвозвратно удалять выбранные объекты после явного подтверждения; при удалении выбранной папки также удаляется всё её содержимое. Загрузка с Mac на Android и переименование недоступны. Доступ к папке или Mac можно отозвать. Для конфиденциального вопроса напишите на <a href="mailto:albert.kytytzov@gmail.com">albert.kytytzov@gmail.com</a>. При добровольном обращении разработчик получает адрес отправителя и текст сообщения только для ответа; удалить переписку можно запросить по тому же адресу с учётом обязательных сроков хранения. Публичное обращение можно создать на <a href="https://github.com/albertkytytzov-cyber/FileTandem-Support/issues/new/choose">странице поддержки</a>; не публикуйте там конфиденциальные данные.</p>
     </section>
   </main>
 
